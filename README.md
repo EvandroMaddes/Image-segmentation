@@ -9,8 +9,8 @@ Starting from the model of the prof. Lattari, we tuned parameters. We worked mai
 However, this model did not reach very high score (no more than 0.3 on the global IoU). 
 Then we moved to a transfer learning approach in which we adopted different models for encoding and decoding.  
 Model available as encoder:  
-
-Models available as decoder: Unet, FPN, Linknet, PSPNet 
+![encoders](/encoders.PNG)  
+Models available as decoder: Unet, FPN, Linknet, PSPNet.  
 We worked in parallel on four models: one for each dataset. 
 Since we noticed no big differences for images of Bipbip and Weedelec datasets, we adopted similar models for these two datasets. 
 For both models the decoder is the *efficientnetb4* (in the notebook we link to the specific documentation). This backbone is chosen due to the low number of parameters. Since we have few data for training, we decided to choose a simple model wrt parameters.  
