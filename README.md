@@ -23,11 +23,15 @@ After the generation of the three sets (training, validation and test) we plotte
 We used different learning rate: 1e<sup>-5</sup> for the Bipbip model while 3e<sup>-5</sup> for the Weedelec model. 
 Each model trains on one specific dataset using as metrics Intersection of Union. 
 For what concerns Pead and Roseau, we used “Vgg16” combined with FPN, with a learning rate set to 1e<sup>-5</sup>, the sparse categorical cross-entropy and Adam as optimizer. We only used horizontal flip and shifts for augmentation, with image size 512x512 and batch size 1. 
-During this challenge we also try to approach the problem in different way. We did our best to follow the advice of professor Matteucci, implementing the tiling of the images. We were able to implement the function to split an image in tiles and the respective mask. For what concerns the reconstruction of the image we encounter some trouble and we decided to give up. 
+During this challenge we also try to approach the problem in different way. We did our best to follow the advice of professor Matteucci, implementing the tiling of the images. We were able to implement the function to split an image in tiles and the respective mask. For what concerns the reconstruction of the image we encounter some trouble and we decided to give up.
 Another approach was to split the data based on the seed (mais, haricot) but the results obtained did not improve the previous one.	 
 For all the models, during the training, we used early stopping and reduce on plateau functions to get the best results. We also set a scheduler for the learning rate based on the number of epochs but at the end we did not use it. The value of parameters of these functions are mainly based on the current learning rate and on the number of parameters of the entire model.   
 After training we plotted the images from the validation set, the correspond mask and the predicted by our model in order to evaluate the weakness points of the model.  
 Finally, we achieved good results in terms of generalization; monitoring the mean IoU on the validation set, we did not encounter overfitting until 0,5. From 0,6 on we started to overfit even if the training ended just after. 
+
+Authors:  
+- [Federico Morreale](https://github.com/fedy97)
+- [Evandro Maddes](https://github.com/EvandroMaddes)
 
  
 
